@@ -33,7 +33,7 @@ class Product(models.Model):
   thumbnail = models.ImageField(upload_to='uploads/', blank=True, null=True)
 
   class Meta:
-    ordering = ['-date-added']
+    ordering = ['-date_added']
 
   def __str__(self):
     return self.title

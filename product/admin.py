@@ -5,5 +5,5 @@ from .models import Category, Product
 # Register your models here.
 
 
-admin.register.site(Category)
-admin.register.site(Product)
+admin.site.register(Category)
+admin.site.register(Product)
