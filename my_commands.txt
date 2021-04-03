@@ -5,6 +5,7 @@ $ pip install -r requirements.txt
 
 python manage.py startapp core
 python manage.py startapp vendor
+python manage.py startapp product
 
 python manage.py runserver
 
@@ -12,3 +13,5 @@ python manage.py makemigrations
 python manage.py migrate
 
 python manage.py createsuperuser
+
+pip install Pillow
