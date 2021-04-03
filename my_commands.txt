@@ -4,5 +4,11 @@ $ pip install -r requirements.txt
 Таким образом, разом установятся все необходимые пакеты.
 
 python manage.py startapp core
+python manage.py startapp vendor
 
 python manage.py runserver
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py createsuperuser
