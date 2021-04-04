@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // тоже самое
     // const $navbar = Array.from(document.querySelectorAll('.navbar-burger'))
     // console.log('$navbarBurgers', $navbarBurgers)
-    console.log('$navbar', $navbar)
+    // console.log('$navbar', $navbar)
     if ($navbarBurgers.length >0) {
         $navbarBurgers.forEach(el => {
             el.addEventListener('click', () => {

@@ -38,22 +38,26 @@ class Product(models.Model):
   def __str__(self):
     return self.title
 
-  def get_thubnail(self):
+  def get_thumbnail(self):
     if self.thumbnail:
-      return self.thumbnail
+      return self.thumbnail.url
     else:
       if self.image:
         self.thumbnail = self.make_thumbnail(self.image)
         self.save()
+
         return self.thumbnail.url
       else:
-        return 'https://via/placeholder.com/240x180.jpg'
+        return 'https://via.placeholder.com/240x180.jpg'
 
   def make_thumbnail(self, image, size=(300, 200)):
     img = Image.open(image)
     img.convert('RGB')
     img.thumbnail(size)
+
     thumb_io = BytesIO()
     img.save(thumb_io, 'JPEG', quality=85)
+
     thumbnail = File(thumb_io, name=image.name)
+
     return thumbnail
